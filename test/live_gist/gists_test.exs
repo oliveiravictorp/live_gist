@@ -8,7 +8,7 @@ defmodule LiveGist.GistsTest do
 
     import LiveGist.GistsFixtures
 
-    @invalid_attrs %{name: nil, description: nil, markup_test: nil}
+    @invalid_attrs %{name: nil, description: nil, markup_text: nil}
 
     test "list_gists/0 returns all gists" do
       gist = gist_fixture()
@@ -21,12 +21,12 @@ defmodule LiveGist.GistsTest do
     end
 
     test "create_gist/1 with valid data creates a gist" do
-      valid_attrs = %{name: "some name", description: "some description", markup_test: "some markup_test"}
+      valid_attrs = %{name: "some name", description: "some description", markup_text: "some markup_text"}
 
       assert {:ok, %Gist{} = gist} = Gists.create_gist(valid_attrs)
       assert gist.name == "some name"
       assert gist.description == "some description"
-      assert gist.markup_test == "some markup_test"
+      assert gist.markup_text == "some markup_text"
     end
 
     test "create_gist/1 with invalid data returns error changeset" do
@@ -35,12 +35,12 @@ defmodule LiveGist.GistsTest do
 
     test "update_gist/2 with valid data updates the gist" do
       gist = gist_fixture()
-      update_attrs = %{name: "some updated name", description: "some updated description", markup_test: "some updated markup_test"}
+      update_attrs = %{name: "some updated name", description: "some updated description", markup_text: "some updated markup_text"}
 
       assert {:ok, %Gist{} = gist} = Gists.update_gist(gist, update_attrs)
       assert gist.name == "some updated name"
       assert gist.description == "some updated description"
-      assert gist.markup_test == "some updated markup_test"
+      assert gist.markup_text == "some updated markup_text"
     end
 
     test "update_gist/2 with invalid data returns error changeset" do

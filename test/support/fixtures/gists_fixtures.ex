@@ -13,7 +13,7 @@ defmodule LiveGist.GistsFixtures do
       |> Enum.into(%{
         name: "some name",
         description: "some description",
-        markup_test: "some markup_test"
+        markup_text: "some markup_text"
       })
       |> LiveGist.Gists.create_gist()
 

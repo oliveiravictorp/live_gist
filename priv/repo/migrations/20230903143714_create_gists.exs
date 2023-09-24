@@ -6,7 +6,7 @@ defmodule LiveGist.Repo.Migrations.CreateGists do
       add :id, :binary_id, primary_key: true
       add :name, :string
       add :description, :text
-      add :markup_test, :text
+      add :markup_text, :text
       add :user_id, references(:users, on_delete: :delete_all, type: :binary_id)
 
       timestamps()

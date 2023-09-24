@@ -24,20 +24,20 @@
   left: calc(95% - 12px);
   border-width: 0 5px 5px 5px;
   border-style: solid;
-  border-color: transparent transparent white transparent
+  border-color: transparent transparent white transparent;
 }
 
 .menu-item {
-  @apply block px-4 py-2 text-sm text-white font-brand font-regular
+  @apply block px-4 py-2 text-sm text-white font-brand font-regular;
 }
 
 .menu-item:hover {
-  @apply hover:text-emDark-light
+  @apply hover:text-emDark-light;
 }
 
 .round-image-padding {
   border-radius: 50%;
-  bordeR: 1.5px solid #FFF;
+  border: 1.5px solid #fff;
   padding: 4px;
 }
 
@@ -50,4 +50,15 @@
   border-width: 3px 3px 0 3px;
   border-color: white transparent transparent transparent;
   border-style: solid;
+}
+
+.em-gradient {
+  background-image: linear-gradient(
+    to bottom,
+    #631a61,
+    #551653,
+    #340e33,
+    #010101
+  );
+  height: 225px;
 }

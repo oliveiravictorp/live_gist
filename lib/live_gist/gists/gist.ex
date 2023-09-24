@@ -7,7 +7,7 @@ defmodule LiveGist.Gists.Gist do
   schema "gists" do
     field :name, :string
     field :description, :string
-    field :markup_test, :string
+    field :markup_text, :string
     belongs_to :user, LiveGist.Accounts.User
     has_many :comments, LiveGist.Comments.Comment
 
@@ -17,7 +17,7 @@ defmodule LiveGist.Gists.Gist do
   @doc false
   def changeset(gist, attrs) do
     gist
-    |> cast(attrs, [:name, :description, :markup_test, :user_id])
-    |> validate_required([:name, :description, :markup_test, :user_id])
+    |> cast(attrs, [:name, :description, :markup_text, :user_id])
+    |> validate_required([:name, :description, :markup_text, :user_id])
   end
 end
